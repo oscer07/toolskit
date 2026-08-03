@@ -36,6 +36,10 @@ Built entirely on **.NET 8.0** and **WPF**, it leverages modern desktop capabili
 
 Tool Kit is distributed as a **self-contained executable**, meaning you don't even need the .NET runtime installed on your machine!
 
+Update YOUR GitHub token placeholder in GithubInstallView
+`search api of github`
+
+
 1. Navigate to the **[Releases](../../releases)** page.
 2. Download the latest `ToolKit-Release-v0.1-beta.zip` or `.tar.gz`.
 3. Extract the archive to your preferred directory.
