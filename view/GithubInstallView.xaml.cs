@@ -37,7 +37,7 @@ namespace ToolkitApp.Views
     public partial class GithubInstallView : UserControl
     {
         private const string ConfigFile = "tools_config.json";
-        private const string GitHubToken = "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";
+        private const string GitHubToken = "ADD YOUR SEARCH API";
 
         public GithubInstallView()
         {
