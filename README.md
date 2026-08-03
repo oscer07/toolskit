@@ -41,8 +41,7 @@ Update YOUR GitHub token placeholder in GithubInstallView
 
 
 1. Navigate to the **[Releases](../../releases)** page.
-2. Download the latest `ToolKit-Release-v0.1-beta.zip` or `.tar.gz`.
-3. Extract the archive to your preferred directory.
+2. Download the latest `ToolKit-Release-v0.1-beta.exe`.
 4. Run `ToolKit.exe`.
 
 ### Adding Your First Tool
