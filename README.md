@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="ToolkitApp/icon.png" alt="Tool Kit Logo" width="120"/>
+  <img src="https://media.istockphoto.com/id/984169682/vector/tools-box-icon-concept-web-buttons-vector-illustration-flat-design-style.jpg?s=612x612&w=0&k=20&c=j0xrXsFK1GjYSBWcYbE79SE3ow2K0vx22HV_LPm-8C4=" alt="Tool Kit Logo" width="120"/>
   <h1>Tool Kit</h1>
   <p><strong>A modern, extensible WPF application for managing and executing CLI tools.</strong></p>
 
