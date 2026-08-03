@@ -1,0 +1,57 @@
+<Window x:Class="ToolkitApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tool Kit" Height="700" Width="1000"
+        Background="{StaticResource BgDarkBrush}"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI"
+        KeyDown="Window_KeyDown">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <Border Grid.Column="0" Background="{StaticResource BgMediumBrush}">
+            <StackPanel Margin="0,20,0,0">
+                <TextBlock Text="TOOL KIT" Foreground="{StaticResource AccentBrush}" 
+                           FontSize="24" FontWeight="Bold" Margin="20,0,0,30"/>
+                
+                <Button x:Name="btnHome" Content="Home" Click="Nav_Home" 
+                        Margin="10,5" Height="40" Background="Transparent" 
+                        Foreground="{StaticResource TextLightBrush}" FontSize="16" HorizontalContentAlignment="Left"/>
+                <Button x:Name="btnTools" Content="Run Tools" Click="Nav_Tools" 
+                        Margin="10,5" Height="40" Background="Transparent" 
+                        Foreground="{StaticResource TextLightBrush}" FontSize="16" HorizontalContentAlignment="Left"/>
+                <Button x:Name="btnInstalledTools" Content="Installed Tools" Click="Nav_InstalledTools" 
+                        Margin="10,5" Height="40" Background="Transparent" 
+                        Foreground="{StaticResource TextLightBrush}" FontSize="16" HorizontalContentAlignment="Left"/>
+                <Button x:Name="btnAbout" Content="About" Click="Nav_About" 
+                        Margin="10,5" Height="40" Background="Transparent" 
+                        Foreground="{StaticResource TextLightBrush}" FontSize="16" HorizontalContentAlignment="Left"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Main Content Area -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Top Bar -->
+            <Border Grid.Row="0" Background="{StaticResource BgMediumBrush}" BorderBrush="#444" BorderThickness="0,0,0,1">
+                <Grid>
+                    <Button x:Name="btnInstallGithub" Content="🔍 Install GitHub Tool (Ctrl+Q)" 
+                            Click="Nav_InstallGithub" HorizontalAlignment="Right" VerticalAlignment="Center"
+                            Margin="0,0,20,0" Width="200" Height="30" Background="#333" Foreground="#CCC" BorderBrush="#555" BorderThickness="1"/>
+                </Grid>
+            </Border>
+
+            <!-- Page Content -->
+            <ContentControl x:Name="MainContent" Grid.Row="1" Margin="20"/>
+        </Grid>
+    </Grid>
+</Window>

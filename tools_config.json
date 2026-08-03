@@ -1,0 +1,54 @@
+{
+  "Tools": [
+    {
+      "Name": "GitHub: lazygit",
+      "Command": "git clone https://github.com/jesseduffield/lazygit.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: fzf",
+      "Command": "git clone https://github.com/junegunn/fzf.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: nvm",
+      "Command": "git clone https://github.com/nvm-sh/nvm.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: ohmyzsh",
+      "Command": "git clone https://github.com/ohmyzsh/ohmyzsh.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: neovim",
+      "Command": "git clone https://github.com/neovim/neovim.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: PowerToys",
+      "Command": "git clone https://github.com/microsoft/PowerToys.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: Windows Terminal",
+      "Command": "git clone https://github.com/microsoft/terminal.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: VS Code",
+      "Command": "git clone https://github.com/microsoft/vscode.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: Docker CLI",
+      "Command": "git clone https://github.com/docker/cli.git",
+      "Shell": "cmd"
+    },
+    {
+      "Name": "GitHub: Git for Windows",
+      "Command": "git clone https://github.com/git-for-windows/git.git",
+      "Shell": "cmd"
+    }
+  ]
+}
