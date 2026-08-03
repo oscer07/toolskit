@@ -1,0 +1,59 @@
+<UserControl x:Class="ToolkitApp.Views.GithubInstallView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource BgDarkBrush}">
+    <Border Padding="30" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Grid.Row="0" Text="GitHub Extension Market" Foreground="White" FontSize="32" FontWeight="Light" Margin="0,0,0,10" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Text="Search for tools on GitHub and install them directly." 
+                       Foreground="{StaticResource TextLightBrush}" FontSize="16" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+            
+            <!-- Search Bar -->
+            <Grid Grid.Row="2" Margin="0,0,0,15" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="txtSearch" Grid.Column="0" FontSize="16" Padding="10" Height="40" 
+                         Background="{StaticResource BgMediumBrush}" Foreground="White" BorderBrush="{StaticResource AccentBrush}" BorderThickness="1"/>
+                <Button x:Name="btnSearch" Grid.Column="1" Content="Search" Click="BtnSearch_Click" Width="120" Height="40" Margin="10,0,0,0" FontSize="14"/>
+            </Grid>
+
+            <!-- Results List -->
+            <ListBox x:Name="lstResults" Grid.Row="2" Margin="0,60,0,15" Background="{StaticResource BgMediumBrush}" 
+                     Foreground="{StaticResource TextLightBrush}" BorderThickness="1" BorderBrush="#333"
+                     SelectionChanged="LstResults_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5">
+                            <TextBlock Text="{Binding FullName}" FontWeight="Bold" FontSize="16" Foreground="{StaticResource AccentBrush}"/>
+                            <TextBlock Text="{Binding Description}" FontSize="13" Foreground="#CCC" TextWrapping="Wrap" Margin="0,2,0,0"/>
+                            <TextBlock Text="{Binding StarsText}" FontSize="12" Foreground="Yellow" Margin="0,2,0,0"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <!-- Action Area -->
+            <Grid Grid.Row="3" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="lblStatus" Grid.Column="0" Text="" Foreground="{StaticResource TextTerminalBrush}" FontSize="14" VerticalAlignment="Center"/>
+                <Button x:Name="btnInstall" Grid.Column="1" Content="Install Selected" Click="BtnInstall_Click" Width="150" Height="40" FontSize="14" IsEnabled="False"/>
+            </Grid>
+            
+            <TextBlock Grid.Row="4" Text="Note: This will add a 'git clone' command to your Tools Workspace for the selected repository." 
+                       Foreground="#666" FontSize="12" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+        </Grid>
+    </Border>
+</UserControl>

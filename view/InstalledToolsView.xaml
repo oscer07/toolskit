@@ -1,0 +1,40 @@
+<UserControl x:Class="ToolkitApp.Views.InstalledToolsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Installed Tools" Foreground="{StaticResource AccentBrush}" FontSize="24" FontWeight="SemiBold" Margin="0,0,0,20"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <ListBox x:Name="lstInstalledTools" Background="Transparent" BorderThickness="0"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     MouseDoubleClick="LstInstalledTools_MouseDoubleClick">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="{StaticResource BgMediumBrush}" CornerRadius="8" Padding="20" Margin="10" Width="200" Height="150" BorderBrush="#444" BorderThickness="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="{Binding Name}" Foreground="White" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Grid.Row="0"/>
+                                <TextBlock Text="{Binding Command}" Foreground="#AAA" FontSize="12" FontFamily="Consolas" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Row="1"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
